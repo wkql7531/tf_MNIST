@@ -52,7 +52,7 @@ test_labels = tf.keras.utils.to_categorical(test_labels)
 print(train_labels)
 
 #batch_size = 한번학습할때 128장씩 학습 배치싸이즈가 없으면 오래걸림
-model.fit(train_images, train_labels, epochs=1, batch_size= 128)
+model.fit(train_images, train_labels, epochs=5, batch_size= 128)
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 print(test_loss)
 print(test_acc)
@@ -60,7 +60,7 @@ print(test_acc)
 myDigit = origin_my_image
 
 plt.imshow(myDigit, cmap = "binary")
-plt.show()
+#plt.show()
 # (28,28) > (1,28,28)
 my_image = myDigit.reshape((1, 28, 28))
 output = model.predict(my_image)
@@ -68,12 +68,12 @@ print('result:', np.argmax(output))
 
 (t_i, t_l), (test_i, test_l) = tf.keras.datasets.mnist.load_data()
 plt.imshow(test_i[1], cmap = "binary")
-plt.show()
+#plt.show()
 
 output = model.predict(test_i[1].reshape(1, 28, 28))
 print('result :' , np.argmax(output))
 
-img = PIL.Image.open("C:/Users/장희동/Desktop/Project_Tensorflow/imgs/5.jpg")
+img = PIL.Image.open("C:/Users/장희동/Desktop/Project_Tensorflow/imgs/9.jpg")
 img = img.resize((28,28))
 
 img_data = np.array(img)
