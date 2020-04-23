@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name             = 'tf_MNIST',
-    version          = '0.1',
+    version          = '0.1.0',
     description      = 'MNIST example',
-    author           = 'wkql',
+    author           = 'wkql7531',
    python_requires  = '>=3',
     zip_safe         = False,
     classifiers      = [
