@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     #컴파일
     model.compile(
-        optimizer = 'rmsprop',#adam(가장효율이 좋음)
+        optimizer = 'adam',#rmsprop,adam(가장효율이 좋음)
         loss = 'categorical_crossentropy',
         metrics = ['accuracy']
     )
