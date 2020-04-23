@@ -1,3 +1,5 @@
+#tensorflow v1
+
 import tensorflow as tf
 from pkg.tensorflow.tensorflow.examples.tutorials.mnist import input_data
 

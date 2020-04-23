@@ -8,6 +8,7 @@ import PIL
 #이미지 다운로드
 (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.mnist.load_data()
 
+"""
 #데이터형태 보기
 print(train_images.shape)
 print(train_labels)
@@ -17,6 +18,7 @@ digit = train_images[1]
 
 plt.imshow(digit, cmap = "binary")
 #plt.show()
+"""
 
 #테스트데이터
 origin_my_image = test_images[0]
@@ -57,6 +59,7 @@ test_loss, test_acc = model.evaluate(test_images, test_labels)
 print(test_loss)
 print(test_acc)
 
+"""
 myDigit = origin_my_image
 
 plt.imshow(myDigit, cmap = "binary")
@@ -72,6 +75,7 @@ plt.imshow(test_i[1], cmap = "binary")
 
 output = model.predict(test_i[1].reshape(1, 28, 28))
 print('result :' , np.argmax(output))
+"""
 
 img = PIL.Image.open("C:/Users/장희동/Desktop/Project_Tensorflow/imgs/9.jpg")
 img = img.resize((28,28))
