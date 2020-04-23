@@ -25,11 +25,11 @@ model.compile(
 
 #전처리
 "train_images = train_images.reshape((60000, 28*28))"
-train_images = train_images.astype('float32')/255
+train_images = train_images.astype('float32')/255.0
 print(train_images.shape)
 
 "test_images = test_images.reshape((10000, 28*28))"
-test_images = test_images.astype('float32')/255
+test_images = test_images.astype('float32')/255.0
 
 train_labels = tf.keras.utils.to_categorical(train_labels)
 test_labels = tf.keras.utils.to_categorical(test_labels)
