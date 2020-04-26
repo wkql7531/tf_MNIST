@@ -1,7 +1,6 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
-import PIL 
 
 def trainData_pretreat(train_images, train_labels, test_images, test_labels):
     Processed_train_images = train_images.astype('float32')/255.0
@@ -23,3 +22,8 @@ def imgData_pretreat(img,show=True):
     Processed_trans_test_img = Processed_trans_test_img.astype('float32')/255.0
 
     return Processed_trans_test_img
+
+
+
+if __name__ == "__main__":
+    pass
