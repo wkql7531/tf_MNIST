@@ -14,8 +14,8 @@ def trainData_pretreat(train_images, train_labels, test_images, test_labels):
 def imgData_pretreat(img,show=True):
     Processed_img = img.resize((28,28))
     Processed_img_data = np.array(Processed_img)
-    plt.imshow(Processed_img_data, cmap = "binary")
     if show:
+        plt.imshow(Processed_img_data, cmap = "binary")
         plt.show()
     Processed_trans_img = Processed_img_data.transpose(2,0,1)
     Processed_trans_test_img = Processed_trans_img[0].reshape((1,28,28))

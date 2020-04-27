@@ -2,6 +2,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 import PIL 
+import random
 
 import pkg.myPretreat as myPretreat
 import pkg.myMachineLearning as myMachineLearning
@@ -29,4 +30,12 @@ if __name__ == "__main__":
 
         #결과출력
         output = model.predict(trans_test_img)
+        #입력받은 숫자 numpy.ndarry형의 ndarry찾기
+        finding_index = np.where(train_labels == np.argmax(output))
+        #index 저장
+        img_index = finding_index[0][int(random.randrange(int(finding_index[0].shape[0])))]
+        #해당 index의 img출력
+        plt.imshow(train_images[img_index], cmap = "binary")
+        #img보기
+        plt.show()
         print("result "+ str(i) + " :" , np.argmax(output))

@@ -24,7 +24,7 @@ def mnistMachine_learning(train_images, train_labels, test_images, test_labels):
 
     #기계학습
     "#batch_size = 한번학습할때 128장씩 학습 배치싸이즈가 없으면 오래걸림"
-    model.fit(train_images, train_labels, epochs=10, batch_size= 128)
+    model.fit(train_images, train_labels, epochs=5, batch_size= 128)
     model.evaluate(test_images, test_labels)
 
     return model
